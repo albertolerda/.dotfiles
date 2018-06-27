@@ -36,3 +36,5 @@ if has('cscope')
 
   command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
 endif
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0

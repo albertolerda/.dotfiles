@@ -105,5 +105,11 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
 
-
+source ~/develop/emsdk/emsdk_set_env.sh
 export PATH=$PATH:/home/alby/bin/pycharm-community-2017.2/bin
+
+# Erlang kernel for jupyter
+ERL_LIBS=~/src/ierlang-dev/erlzmq2:$ERL_LIBS
+export ERL_LIBS
+export PATH=$PATH:$ERL_LIBS
+export VTE_VERSION="100"
