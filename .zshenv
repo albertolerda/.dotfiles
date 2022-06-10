@@ -13,7 +13,7 @@ alias vim=nvim
 alias v=nvim
 export VISUAL=nvim
 
-eval "$(luarocks51 path --bin)"
+eval "$(luarocks51 path --bin || luarocks path --bin)"
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
   if [ -x "$(command -v nvr)" ]; then
@@ -22,3 +22,4 @@ if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
     alias nim='echo "No nesting!"'
   fi
 fi
+
